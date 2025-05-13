@@ -1,0 +1,2375 @@
+/* Animation Keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Advanced styling to enhance the landing page */
+.animate-fade {
+  animation: fadeIn 0.8s ease forwards;
+}
+
+.animate-slide {
+  opacity: 0;
+  animation: slideUp 0.8s ease forwards;
+}
+
+.animate-delay-1 {
+  animation-delay: 0.2s;
+}
+
+.animate-delay-2 {
+  animation-delay: 0.4s;
+}
+
+.animate-delay-3 {
+  animation-delay: 0.6s;
+}
+
+/* Glass card effect */
+.glass-card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(90deg, #0047ba, #4b9bff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+/* Modern button hover effects */
+.btn-modern {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.btn-modern:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+  z-index: -2;
+}
+
+.btn-modern:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+  transition: all 0.3s;
+  z-index: -1;
+}
+
+.btn-modern:hover:before {
+  width: 100%;
+}
+
+/* Floating element effect */
+.float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* Timeline connector */
+.timeline-item:not(:last-child):before {
+  content: "";
+  position: absolute;
+  top: 40px;
+  left: 20px;
+  width: 2px;
+  height: calc(100% - 40px);
+  background-color: var(--primary-light);
+}
+
+/* Highlight box */
+.highlight-box {
+  border-left: 4px solid var(--primary);
+  padding-left: 1rem;
+  margin: 1.5rem 0;
+}
+
+/* Image overlay */
+.image-overlay {
+  position: relative;
+  overflow: hidden;
+}
+
+.image-overlay:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.7) 100%
+  );
+  z-index: 1;
+}
+
+/* Responsive improvements */
+@media (max-width: 768px) {
+  .mobile-hide {
+    display: none;
+  }
+
+  .mobile-stack {
+    flex-direction: column !important;
+  }
+
+  .mobile-center {
+    text-align: center;
+  }
+
+  .mobile-full {
+    width: 100% !important;
+  }
+
+  header {
+    position: absolute !important;
+    background: rgba(0, 71, 186, 0.95);
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 0.3rem 0;
+  }
+
+  header.header-scrolled {
+    position: fixed !important;
+  }
+
+  .logo {
+    font-size: 1.4rem;
+  }
+
+  .hero {
+    min-height: auto !important;
+    padding-top: 4.5rem !important;
+    padding-bottom: 2rem !important;
+  }
+
+  .hero-content {
+    padding: 0.5rem 0 !important;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+    margin-top: 0;
+    margin-bottom: 0.6rem;
+  }
+
+  .seminar-date {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+    margin: 0.5rem auto;
+    line-height: 1.4;
+    max-width: 90%;
+  }
+
+  .hero p {
+    font-size: 0.95rem;
+    margin: 0.5rem auto;
+    line-height: 1.4;
+    max-width: 90%;
+  }
+
+  .btn {
+    margin-top: 0.5rem;
+    padding: 0.6rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .section-title h2 {
+    font-size: 1.8rem;
+  }
+
+  section {
+    padding: 1.5rem 0;
+    margin-bottom: 0;
+  }
+
+  nav ul {
+    display: none;
+  }
+
+  .mobile-menu-toggle {
+    display: block;
+    font-size: 1.3rem;
+    padding: 0.2rem 0.4rem;
+  }
+
+  nav ul.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 71, 186, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 0.8rem 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    z-index: 200;
+  }
+
+  nav ul.active li {
+    margin: 0.5rem 0;
+    text-align: center;
+  }
+
+  nav ul.active li a {
+    display: block;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .cards-container {
+    grid-template-columns: 1fr !important;
+    gap: 1rem;
+    max-width: 90%;
+    margin: 0 auto;
+    margin-top: 1rem;
+  }
+
+  .card,
+  .glass-card {
+    margin-bottom: 0;
+    padding: 1rem;
+  }
+
+  .card-img {
+    height: 140px;
+  }
+
+  .card-content {
+    padding: 0.8rem;
+  }
+
+  .card h3,
+  .glass-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .card p,
+  .glass-card p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  footer {
+    padding: 2rem 0 1rem;
+  }
+
+  .footer-content {
+    flex-direction: column;
+  }
+
+  .footer-logo {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .notice-box {
+    padding: 1.2rem;
+    margin-top: 1.5rem;
+  }
+
+  .notice-box h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .notice-box ul {
+    margin-top: 0.5rem;
+  }
+
+  .notice-box ul li {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+    padding-left: 1rem;
+  }
+
+  .divider {
+    margin: 1rem auto;
+    width: 50px;
+  }
+
+  .info-container,
+  .timeline {
+    padding: 1.2rem;
+  }
+
+  .info-row,
+  .timeline-item {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .cta {
+    padding: 2rem 0;
+    margin-top: -1rem;
+    padding-top: 1.5rem;
+  }
+
+  .form-container {
+    padding: 1.2rem;
+  }
+
+  .form-control {
+    margin-bottom: 1rem;
+  }
+
+  /* 중요 안내사항 개선 */
+  .seminar-topics-container {
+    gap: 0.5rem;
+    margin-top: 0.7rem;
+  }
+
+  .seminar-topic {
+    padding: 0.6rem 0.8rem;
+  }
+
+  .seminar-topic span {
+    font-size: 0.9rem;
+    line-height: 1.3;
+    display: flex;
+    align-items: center;
+  }
+
+  .topic-number {
+    min-width: 20px;
+    height: 20px;
+    font-size: 0.8rem;
+    margin-right: 8px;
+  }
+
+  /* 타임라인 세로선 모바일 조정 */
+  .timeline::before {
+    left: 25px;
+    opacity: 0.7; /* 모바일에서는 좀 더 투명하게 */
+    width: 3px;
+  }
+
+  .timeline-number {
+    position: absolute;
+    left: 0;
+    margin-right: 0;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #4b9bff, #0070cc);
+    box-shadow: 0 3px 8px rgba(0, 112, 204, 0.25);
+  }
+
+  .timeline-number span {
+    font-size: 1.2rem;
+  }
+
+  .timeline-number img {
+    width: 40px;
+    height: 40px;
+    opacity: 0.3;
+  }
+
+  .timeline-content h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .timeline-content p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  /* 중요 공지 최적화 */
+  .important-notice {
+    font-size: 0.85rem;
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    line-height: 1.3;
+  }
+
+  .info-icon {
+    width: 35px;
+    height: 35px;
+    margin-right: 1rem;
+    font-size: 1.2rem;
+  }
+
+  .info-container {
+    padding: 1.2rem;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .card-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+  }
+
+  .form-container .btn {
+    font-size: 0.85rem;
+    padding: 0.6rem 1.6rem;
+  }
+
+  .cta h2 {
+    font-size: 1.5rem;
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  #details,
+  #eligibility,
+  #application-process,
+  .benefits {
+    padding: 1.5rem 0;
+  }
+
+  .section-title {
+    margin-bottom: 1.2rem;
+  }
+
+  /* 섹션 간 공백 조절 */
+  .cards-container,
+  .seminar-details-container,
+  .eligibility-container,
+  .steps-container {
+    margin-bottom: 0;
+  }
+
+  /* 섹션 배경 이미지가 있는 경우의 여백 조절 */
+  #details::before,
+  #eligibility::before,
+  #application-process::before {
+    opacity: 0.03;
+  }
+
+  .seminar-details-container,
+  .eligibility-container,
+  .steps-container {
+    padding: 1rem;
+    margin-top: 1rem;
+  }
+
+  /* 카드 컨테이너의 위쪽 마진 줄이기 */
+  .cards-container {
+    margin-top: 1rem;
+  }
+
+  /* 섹션 사이의 공백 줄이기 */
+  .cta {
+    margin-top: -1rem;
+    padding-top: 1.5rem;
+  }
+
+  /* 팀라인 스텝 아이템 마진 줄이기 */
+  .step-item {
+    margin-bottom: 1.2rem;
+  }
+
+  .step-item:last-child {
+    margin-bottom: 0;
+  }
+
+  /* 공통 섹션 여백 조정 */
+  #details,
+  #eligibility,
+  #application-process,
+  .benefits {
+    padding: 1.5rem 0;
+  }
+
+  /* 세부 정보에서 기본 정보와 콘텐츠 사이 공백 줄이기 */
+  .details-basic-info {
+    padding-bottom: 0.8rem;
+    margin-bottom: 0.8rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero {
+    padding: 4.5rem 0 2rem;
+  }
+
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .seminar-date {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.6rem;
+    margin: 0.4rem auto;
+  }
+
+  .hero p {
+    font-size: 0.9rem;
+    margin: 0.4rem auto;
+  }
+
+  .btn {
+    padding: 0.5rem 1.3rem;
+    font-size: 0.85rem;
+  }
+
+  .section-title h2 {
+    font-size: 1.6rem;
+  }
+
+  section {
+    padding: 1.2rem 0;
+  }
+
+  .section-title {
+    margin-bottom: 1rem;
+  }
+
+  .section-title p {
+    font-size: 0.85rem;
+  }
+
+  .cards-container {
+    max-width: 100% !important;
+    margin-top: 0.8rem;
+  }
+
+  .card-img {
+    height: 160px;
+  }
+
+  .info-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 0.8rem;
+    font-size: 1rem;
+  }
+
+  .card-icon {
+    width: 35px;
+    height: 35px;
+    margin-bottom: 0.8rem;
+    font-size: 1rem;
+  }
+
+  .form-container .btn {
+    font-size: 0.8rem;
+    padding: 0.5rem 1.4rem;
+  }
+
+  .cta h2 {
+    font-size: 1.3rem;
+    line-height: 1.4;
+    word-break: keep-all;
+  }
+
+  #details,
+  #eligibility,
+  #application-process,
+  .benefits {
+    padding: 1.2rem 0;
+  }
+
+  .step-item {
+    margin-bottom: 1rem;
+  }
+
+  .details-basic-info {
+    padding-bottom: 0.6rem;
+    margin-bottom: 0.6rem;
+  }
+}
+
+/* Mobile menu */
+.mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .mobile-menu-toggle {
+    display: block;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 60px;
+    right: -100%;
+    width: 80%;
+    height: calc(100vh - 60px);
+    background: var(--primary);
+    transition: right 0.3s ease;
+    flex-direction: column;
+    padding: 2rem;
+  }
+
+  .nav-menu.active {
+    right: 0;
+  }
+
+  .nav-menu li {
+    margin: 1rem 0;
+  }
+}
+
+/* Additional utility classes */
+.shadow-hover {
+  transition: box-shadow 0.3s ease;
+}
+
+.shadow-hover:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, var(--primary), var(--primary-light));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.border-gradient {
+  border: double 4px transparent;
+  background-image: linear-gradient(white, white),
+    linear-gradient(to right, var(--primary), var(--primary-light));
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+
+.grid-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 20px;
+}
+
+.counter {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.divider {
+  height: 4px;
+  width: 60px;
+  background: linear-gradient(to right, var(--primary), var(--primary-light));
+  margin: 2rem auto;
+  border-radius: 2px;
+}
+
+/* 기본 스타일 - 인라인 스타일에서 이동 */
+:root {
+  --primary: #0047ba;
+  --primary-light: #4b9bff;
+  --accent: #ff5b35;
+  --light: #f8f9fa;
+  --dark: #212529;
+  --gray: #6c757d;
+  --success: #28a745;
+  --section-padding-mobile: 1.5rem 0;
+  --card-padding-mobile: 0.8rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  color: var(--dark);
+  line-height: 1.6;
+  background-color: white;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+header {
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  color: white;
+  padding: 0.8rem 0;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+header.header-scrolled {
+  position: fixed;
+  padding: 0.5rem 0;
+  background: rgba(0, 71, 186, 0.95);
+  backdrop-filter: blur(10px);
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-left: 2rem;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+section {
+  padding: 3rem 0 5rem;
+}
+
+.hero {
+  background: linear-gradient(rgba(0, 71, 186, 0.8), rgba(0, 71, 186, 0.9)),
+    url("image/성실청강.jpg") center/cover;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: 6rem 0 3rem;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.seminar-date {
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+  padding: 0.6rem 1.5rem;
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 50px;
+  display: inline-block;
+  backdrop-filter: blur(5px);
+  font-weight: 500;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  background-color: var(--accent);
+  color: white;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 15px rgba(255, 91, 53, 0.2);
+  margin-top: 0.5rem;
+}
+
+.btn:hover {
+  background-color: #ff7252;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(255, 91, 53, 0.3);
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-title h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title h2::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70px;
+  height: 4px;
+  background-color: var(--primary);
+  border-radius: 2px;
+}
+
+.section-title p {
+  font-size: 1.1rem;
+  color: var(--gray);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.benefits {
+  background-color: var(--light);
+  padding: 5rem 0;
+}
+
+.benefits .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+@media (max-width: 1200px) {
+  .cards-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 모바일 스타일 */
+@media (max-width: 768px) {
+  .mobile-hide {
+    display: none;
+  }
+
+  .mobile-stack {
+    flex-direction: column !important;
+  }
+
+  .mobile-center {
+    text-align: center;
+  }
+
+  .mobile-full {
+    width: 100% !important;
+  }
+
+  header {
+    position: absolute !important;
+    background: rgba(0, 71, 186, 0.95);
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 0.3rem 0;
+  }
+
+  header.header-scrolled {
+    position: fixed !important;
+  }
+
+  .logo {
+    font-size: 1.4rem;
+  }
+
+  .hero {
+    min-height: auto !important;
+    padding-top: 4.5rem !important;
+    padding-bottom: 2rem !important;
+  }
+
+  .hero-content {
+    padding: 0.5rem 0 !important;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+    margin-top: 0;
+  }
+
+  .seminar-date {
+    font-size: 0.95rem;
+    padding: 0.4rem 0.8rem;
+    margin: 0.8rem auto;
+    line-height: 1.4;
+    max-width: 90%;
+  }
+
+  .hero p {
+    font-size: 1rem;
+    margin: 0.8rem auto;
+    line-height: 1.5;
+    max-width: 90%;
+  }
+
+  .btn {
+    margin-top: 0.8rem;
+    padding: 0.7rem 1.8rem;
+    font-size: 0.9rem;
+  }
+
+  .section-title h2 {
+    font-size: 2rem;
+  }
+
+  nav ul {
+    display: none;
+  }
+
+  .mobile-menu-toggle {
+    display: block;
+  }
+
+  nav ul.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 71, 186, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    z-index: 200;
+  }
+
+  nav ul.active li {
+    margin: 0.8rem 0;
+    text-align: center;
+  }
+
+  nav ul.active li a {
+    display: block;
+    padding: 0.7rem;
+    font-size: 1.1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .footer-content {
+    flex-direction: column;
+  }
+
+  .footer-logo {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+  }
+
+  .countdown-item {
+    margin: 0 0.5rem;
+    min-width: 60px;
+  }
+
+  .countdown-number {
+    font-size: 1.8rem;
+    padding: 0.8rem;
+  }
+}
+
+/* 더 작은 모바일 화면용 스타일 */
+@media (max-width: 576px) {
+  .hero {
+    padding: 4.5rem 0 2rem;
+  }
+
+  .hero h1 {
+    font-size: 1.7rem;
+  }
+
+  .seminar-date {
+    font-size: 0.85rem;
+    padding: 0.3rem 0.7rem;
+    margin: 0.6rem auto;
+    line-height: 1.3;
+  }
+
+  .hero p {
+    font-size: 0.95rem;
+    margin: 0.7rem auto;
+  }
+
+  .btn {
+    padding: 0.6rem 1.6rem;
+    font-size: 0.85rem;
+  }
+
+  .section-title h2 {
+    font-size: 1.6rem;
+  }
+
+  .section-title p {
+    font-size: 1rem;
+    max-width: 95%;
+  }
+
+  .cards-container {
+    max-width: 100% !important;
+  }
+
+  .card-img {
+    height: 160px;
+  }
+}
+
+/* 카드 스타일 */
+.card {
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.card-img {
+  height: 200px;
+  background-color: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gray);
+  position: relative;
+  overflow: hidden;
+}
+
+.card-img img {
+  transition: transform 0.5s ease;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card:hover .card-img img {
+  transform: scale(1.1);
+}
+
+.card-content {
+  padding: 1.5rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--primary);
+}
+
+.card p {
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.6;
+  flex-grow: 1;
+}
+
+/* 글래스 카드 스타일 */
+.glass-card {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  padding: 2rem 1.5rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.glass-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.glass-card .card-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.2rem;
+  font-size: 2rem;
+  box-shadow: 0 5px 15px rgba(0, 71, 186, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.glass-card:hover .card-icon {
+  transform: scale(1.1);
+}
+
+.glass-card h3 {
+  margin-bottom: 1rem;
+  color: var(--primary);
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.glass-card p {
+  color: #555;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  flex-grow: 1;
+}
+
+/* 섹션 스타일 */
+#eligibility {
+  background: linear-gradient(
+    135deg,
+    rgba(248, 249, 250, 0.9),
+    rgba(255, 255, 255, 0.9)
+  );
+  position: relative;
+  overflow: hidden;
+}
+
+#eligibility::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("image/히어로섹션배경.jpg");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.05;
+  z-index: 0;
+}
+
+#eligibility .section-title,
+#eligibility .cards-container {
+  position: relative;
+  z-index: 1;
+}
+
+#details {
+  background: linear-gradient(
+    135deg,
+    rgba(248, 249, 250, 0.8),
+    rgba(255, 255, 255, 0.9)
+  );
+  padding: 5rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+#details::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("image/히어로섹션배경.jpg");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.05;
+  z-index: 0;
+}
+
+/* 정보 컨테이너 스타일 */
+.info-container {
+  position: relative;
+  z-index: 1;
+  max-width: 850px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  padding: 3rem;
+}
+
+.info-row {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 2.5rem;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid rgba(0, 71, 186, 0.1);
+}
+
+.info-row:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.info-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1.5rem;
+  flex-shrink: 0;
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  color: white;
+  font-size: 1.8rem;
+  box-shadow: 0 5px 15px rgba(0, 71, 186, 0.2);
+}
+
+.info-row h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.info-row p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+}
+
+.seminar-topic {
+  background-color: white;
+  border-radius: 8px;
+  padding: 0.8rem 1.2rem;
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: center;
+  border-left: 3px solid var(--primary);
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  position: relative;
+}
+
+.seminar-topic::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background-color: var(--primary);
+  border-radius: 4px 0 0 4px;
+}
+
+.seminar-topic:hover {
+  background-color: rgba(0, 71, 186, 0.03);
+  transform: translateX(3px);
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+.seminar-topic span {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+  line-height: 1.4;
+}
+
+.topic-number {
+  background-color: var(--primary);
+  color: white;
+  min-width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+/* 세미나 내용 컨테이너 최적화 */
+.seminar-topics-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+
+/* 모바일 환경에서 세미나 주요 내용 최적화 */
+@media (max-width: 768px) {
+  .seminar-topics-container {
+    gap: 0.5rem;
+    margin-top: 0.7rem;
+  }
+
+  .seminar-topic {
+    padding: 0.6rem 0.8rem;
+    margin-bottom: 0;
+    border-left-width: 3px;
+  }
+
+  .seminar-topic::before {
+    width: 3px;
+  }
+
+  .topic-number {
+    min-width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    font-size: 0.8rem;
+  }
+
+  .seminar-topic span {
+    font-size: 0.9rem;
+    line-height: 1.3;
+  }
+}
+
+@media (max-width: 576px) {
+  .seminar-topics-container {
+    margin-top: 0.5rem;
+  }
+
+  .seminar-topic {
+    padding: 0.6rem 0.8rem;
+    border-left-width: 2px;
+  }
+
+  .seminar-topic::before {
+    width: 2px;
+  }
+
+  .topic-number {
+    min-width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    font-size: 0.75rem;
+  }
+
+  .seminar-topic span {
+    font-size: 0.85rem;
+    line-height: 1.25;
+  }
+}
+
+/* 프로세스 섹션 스타일 */
+#application-process {
+  background: linear-gradient(
+    135deg,
+    rgba(248, 249, 250, 0.9),
+    rgba(255, 255, 255, 0.9)
+  );
+  padding: 5rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+#application-process::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("image/히어로섹션배경.jpg");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.05;
+  z-index: 0;
+}
+
+#application-process .section-title {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 4rem;
+}
+
+.timeline {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 3rem;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  overflow: visible;
+}
+
+/* 타임라인 세로선 개선 */
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 3px;
+  height: calc(100% - 140px);
+  background: linear-gradient(to bottom, #4b9bff, #0070cc);
+  opacity: 0.15;
+  z-index: 0;
+}
+
+.timeline-item {
+  flex: 1;
+  min-width: 180px;
+  max-width: 22%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 2rem;
+  position: relative;
+  padding: 0 15px;
+}
+
+/* 가로 연결선 개선 */
+.timeline-item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 25px;
+  right: -30px;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(to right, #4b9bff, #0070cc);
+  opacity: 0.5;
+  z-index: 1;
+}
+
+.timeline-number {
+  background: white;
+  border: 2px solid #0070cc;
+  color: #0070cc;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  flex-shrink: 0;
+  position: relative;
+  box-shadow: 0 4px 12px rgba(0, 112, 204, 0.15);
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.timeline-number span {
+  position: relative;
+  z-index: 2;
+  font-size: 18px;
+  font-weight: bold;
+  color: #0070cc;
+}
+
+.timeline-number img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.1;
+  transition: opacity 0.3s ease;
+}
+
+.timeline-item:hover .timeline-number {
+  background: linear-gradient(135deg, #4b9bff, #0070cc);
+  transform: translateY(-5px);
+  border-color: transparent;
+}
+
+.timeline-item:hover .timeline-number span {
+  color: white;
+}
+
+.timeline-item:hover .timeline-number img {
+  opacity: 0.3;
+}
+
+.timeline-content {
+  padding: 0;
+  width: 100%;
+}
+
+.timeline-content h3 {
+  font-size: 1.3rem;
+  color: var(--primary);
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+}
+
+.timeline-content p {
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+/* CTA 섹션 스타일 */
+.cta {
+  background: linear-gradient(
+      135deg,
+      rgba(0, 71, 186, 0.9),
+      rgba(75, 155, 255, 0.9)
+    ),
+    url("image/히어로섹션배경.jpg") center/cover;
+  color: white;
+  text-align: center;
+}
+
+.cta h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.3;
+  word-break: keep-all;
+}
+
+.cta p {
+  font-size: 1rem;
+  margin-bottom: 1.8rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 폼 스타일 */
+.form-container {
+  max-width: 600px;
+  margin: 0 auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.form-container .btn {
+  font-size: 0.9rem;
+  padding: 0.7rem 1.8rem;
+}
+
+.form-control {
+  margin-bottom: 1.2rem;
+}
+
+.form-control label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-weight: 500;
+  color: var(--dark);
+  font-size: 0.9rem;
+}
+
+.form-control input,
+.form-control select,
+.form-control textarea {
+  width: 100%;
+  padding: 0.7rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 0.9rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-control input:focus,
+.form-control select:focus,
+.form-control textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(0, 71, 186, 0.1);
+}
+
+.form-control.error input {
+  border-color: #dc3545;
+}
+
+.form-control small {
+  color: #dc3545;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  display: block;
+}
+
+.success-message {
+  background-color: var(--success);
+  color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  animation: fadeIn 0.5s ease;
+}
+
+/* 푸터 스타일 */
+footer {
+  background-color: var(--dark);
+  color: white;
+  padding: 3rem 0 2rem;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.footer-content > div {
+  flex: 1;
+  min-width: 280px;
+}
+
+.footer-logo {
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  color: white;
+  display: inline-block;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.footer-logo:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background: var(--primary);
+}
+
+.footer-info p {
+  margin-bottom: 0.5rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.notice-box {
+  background-color: rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-top: 0;
+}
+
+.notice-box h3 {
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: white;
+}
+
+.notice-box ul {
+  list-style-type: none;
+  color: rgba(255, 255, 255, 0.7);
+  padding-left: 0;
+  margin: 0;
+}
+
+.notice-box ul li {
+  margin-bottom: 0.8rem;
+  position: relative;
+  padding-left: 15px;
+  line-height: 1.5;
+  word-break: keep-all;
+}
+
+.notice-box ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--primary);
+  font-size: 1rem;
+}
+
+.divider {
+  margin: 1.5rem 0;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .footer-content > div {
+    width: 100%;
+    flex: none;
+  }
+
+  .footer-logo {
+    font-size: 1.8rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .notice-box {
+    margin-top: 0;
+  }
+}
+
+/* 카운트다운 스타일 */
+.countdown {
+  display: flex;
+  justify-content: center;
+  margin: 2rem auto;
+  max-width: 600px;
+}
+
+.countdown-item {
+  margin: 0 1rem;
+  text-align: center;
+  min-width: 80px;
+}
+
+.countdown-number {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 0.5rem;
+}
+
+.countdown-label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* 알림 컨테이너 스타일 */
+.notice-container {
+  width: 100%;
+  margin-top: 0.8rem;
+  position: relative;
+  z-index: 5;
+}
+
+/* 알림 박스 스타일 개선 */
+.important-notice {
+  color: #0070cc;
+  font-size: 0.85em;
+  font-weight: 500;
+  display: block;
+  margin: 0;
+  background-color: rgba(0, 112, 204, 0.08);
+  border-left: 3px solid #0070cc;
+  padding: 0.6rem 0.8rem;
+  border-radius: 0 4px 4px 0;
+  text-align: left;
+  width: 100%;
+  box-sizing: border-box;
+  max-width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+/* 모바일 환경에서 타임라인 조정 */
+@media (max-width: 992px) {
+  .timeline {
+    flex-direction: column;
+    padding: 2rem;
+  }
+
+  .timeline-item {
+    width: 100%;
+    max-width: 100%;
+    flex-direction: row;
+    text-align: left;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+    padding: 0 0 0 40px;
+  }
+
+  .timeline-item:not(:last-child)::after {
+    display: none;
+  }
+
+  .timeline::before {
+    left: 20px;
+    top: 20px;
+    height: calc(100% - 40px);
+    transform: none;
+  }
+
+  .timeline-number {
+    margin-right: 1.8rem;
+    margin-bottom: 0;
+  }
+
+  .timeline-content {
+    flex: 1;
+    padding-top: 0.25rem;
+  }
+
+  .notice-container {
+    margin-top: 0.6rem;
+  }
+
+  .important-notice {
+    max-width: 100%;
+    margin-left: 0;
+  }
+}
+
+/* 추가적인 모바일 최적화 */
+@media (max-width: 768px) {
+  /* 빈 공간 문제 해결을 위한 섹션 패딩 조정 */
+  #application-process + section {
+    padding-top: 1rem;
+  }
+
+  .container {
+    padding: 0 15px;
+  }
+
+  /* 정보 행의 마지막 항목 마진 제거 */
+  .info-row:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  /* 타임라인 아이템 간격 조정 */
+  .timeline-item:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  /* 세미나 내용 아이템 스타일 조정 */
+  .seminar-topic {
+    padding: 0.7rem 1rem;
+    margin-bottom: 0;
+    border-left-width: 3px;
+  }
+
+  .seminar-topic::before {
+    width: 3px;
+  }
+}
+
+@media (max-width: 576px) {
+  /* 컨테이너 패딩 감소 */
+  .container {
+    padding: 0 12px;
+  }
+
+  /* 세미나 내용 아이템 더 작은 화면용 스타일 */
+  .seminar-topic {
+    padding: 0.6rem 0.8rem;
+    border-left-width: 2px;
+  }
+
+  .seminar-topic::before {
+    width: 2px;
+  }
+}
+
+/* 새로운 스텝 디자인 스타일 */
+.steps-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2.5rem;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  position: relative;
+}
+
+.step-item {
+  display: flex;
+  margin-bottom: 2.5rem;
+  position: relative;
+  padding-left: 0;
+  transition: all 0.3s ease;
+}
+
+.step-item:hover {
+  border-left-color: transparent;
+}
+
+.step-item:last-child {
+  margin-bottom: 0;
+}
+
+.step-number {
+  background: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--primary);
+  box-shadow: 0 4px 10px rgba(0, 71, 186, 0.1);
+  margin-right: 1.5rem;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.step-item:hover .step-number {
+  background: var(--primary);
+  color: white;
+  transform: scale(1.1);
+}
+
+.step-content {
+  flex: 1;
+  padding-top: 0.25rem;
+}
+
+.step-content h3 {
+  font-size: 1.3rem;
+  color: var(--primary);
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+}
+
+.step-content p {
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 0.8rem;
+}
+
+.step-alert {
+  background-color: rgba(0, 112, 204, 0.08);
+  border-left: 3px solid var(--primary);
+  border-radius: 0 4px 4px 0;
+  padding: 0.8rem 1rem;
+  margin-top: 0.8rem;
+  color: #0070cc;
+  font-size: 0.9rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+/* 모바일 대응 */
+@media (max-width: 768px) {
+  .steps-container {
+    padding: 1.2rem;
+    margin: 0 auto;
+    max-width: 90%;
+  }
+
+  .step-item {
+    margin-bottom: 1.2rem;
+  }
+
+  .step-number {
+    width: 35px;
+    height: 35px;
+    font-size: 1.1rem;
+    margin-right: 0.8rem;
+  }
+
+  .step-content h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .step-content p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin-bottom: 0.5rem;
+  }
+
+  .step-alert {
+    padding: 0.6rem 0.8rem;
+    font-size: 0.85rem;
+    margin-top: 0.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .steps-container {
+    padding: 1rem;
+  }
+
+  .step-number {
+    width: 30px;
+    height: 30px;
+    font-size: 1rem;
+  }
+
+  .step-content h3 {
+    font-size: 1rem;
+  }
+
+  .step-content p {
+    font-size: 0.85rem;
+    line-height: 1.3;
+  }
+
+  .step-alert {
+    padding: 0.5rem 0.7rem;
+    font-size: 0.8rem;
+  }
+}
+
+/* 정보 컨테이너 모바일 최적화 */
+@media (max-width: 768px) {
+  .info-container {
+    padding: 1.2rem;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .info-row h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .info-row p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+}
+
+@media (max-width: 576px) {
+  .info-container {
+    padding: 1rem;
+  }
+
+  .info-row h3 {
+    font-size: 1rem;
+  }
+
+  .info-row p {
+    font-size: 0.85rem;
+    line-height: 1.3;
+  }
+}
+
+/* 세미나 상세 정보 컨테이너 스타일 */
+.seminar-details-container {
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* 기본 정보 스타일 */
+.details-basic-info {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  padding-bottom: 0.8rem;
+  margin-bottom: 0.8rem;
+  border-bottom: 1px solid rgba(0, 71, 186, 0.1);
+}
+
+.detail-item {
+  flex: 1;
+}
+
+.detail-item h3 {
+  color: var(--primary);
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.detail-item p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* 세미나 주요 내용 스타일 */
+.details-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.details-content h3 {
+  color: var(--primary);
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.seminar-topics-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.seminar-topics-list li {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0.8rem 1rem;
+  background-color: rgba(0, 71, 186, 0.03);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.seminar-topics-list li:hover {
+  background-color: rgba(0, 71, 186, 0.06);
+}
+
+.seminar-topics-list .topic-number {
+  background-color: var(--primary);
+  color: white;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin-right: 0.8rem;
+  flex-shrink: 0;
+}
+
+/* 참가 조건 스타일 */
+.eligibility-container {
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+}
+
+.eligibility-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.eligibility-list li {
+  padding: 0.8rem 1rem;
+  border-left: 3px solid var(--primary);
+  border-radius: 0 8px 8px 0;
+  background-color: rgba(0, 71, 186, 0.03);
+  transition: all 0.3s ease;
+}
+
+.eligibility-list li:hover {
+  background-color: rgba(0, 71, 186, 0.06);
+  transform: translateX(5px);
+}
+
+.eligibility-list strong {
+  font-size: 1.1rem;
+  color: var(--primary);
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+.eligibility-list p {
+  margin: 0;
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* 모바일 대응 */
+@media (max-width: 768px) {
+  .seminar-details-container,
+  .eligibility-container {
+    padding: 1.2rem;
+    max-width: 90%;
+  }
+
+  .details-basic-info {
+    flex-direction: column;
+    gap: 1rem;
+    padding-bottom: 1.2rem;
+  }
+
+  .detail-item h3,
+  .details-content h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .detail-item p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  .seminar-topics-list {
+    gap: 0.6rem;
+  }
+
+  .seminar-topics-list li {
+    padding: 0.6rem 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .seminar-topics-list .topic-number {
+    width: 20px;
+    height: 20px;
+    font-size: 0.75rem;
+    margin-right: 0.6rem;
+  }
+
+  .eligibility-list {
+    gap: 0.8rem;
+  }
+
+  .eligibility-list li {
+    padding: 0.6rem 0.8rem;
+  }
+
+  .eligibility-list strong {
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .eligibility-list p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+}
+
+@media (max-width: 576px) {
+  .seminar-details-container,
+  .eligibility-container {
+    padding: 1rem;
+  }
+
+  .detail-item h3,
+  .details-content h3 {
+    font-size: 1rem;
+  }
+
+  .detail-item p,
+  .seminar-topics-list li,
+  .eligibility-list p {
+    font-size: 0.85rem;
+    line-height: 1.3;
+  }
+
+  .eligibility-list strong {
+    font-size: 0.95rem;
+  }
+
+  .seminar-topics-list li,
+  .eligibility-list li {
+    padding: 0.5rem 0.7rem;
+  }
+
+  .seminar-topics-list .topic-number {
+    width: 18px;
+    height: 18px;
+    font-size: 0.7rem;
+    margin-right: 0.5rem;
+  }
+}

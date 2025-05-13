@@ -1,0 +1,23 @@
+# 운영체제 파일
+.DS_Store
+Thumbs.db
+
+# 에디터 파일
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# 백업/임시 파일
+*.bak
+*.swp
+*.tmp
+*.backup
+
+# Firebase 관련
+.firebase/
+firebase-debug.log
+
+# Node.js (Firebase CLI용)
+node_modules/
+npm-debug.log 
