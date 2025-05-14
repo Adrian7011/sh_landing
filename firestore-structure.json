@@ -1,0 +1,41 @@
+{
+  "collections": [
+    {
+      "name": "registrations",
+      "documents": [
+        {
+          "fields": {
+            "name": {
+              "type": "string",
+              "description": "신청자 이름"
+            },
+            "email": {
+              "type": "string",
+              "description": "이메일 주소"
+            },
+            "phone": {
+              "type": "string",
+              "description": "전화번호"
+            },
+            "education": {
+              "type": "string",
+              "description": "최종학력"
+            },
+            "birthdate": {
+              "type": "string",
+              "description": "생년월일"
+            },
+            "gender": {
+              "type": "string",
+              "description": "성별"
+            },
+            "timestamp": {
+              "type": "timestamp",
+              "description": "신청 시간"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
